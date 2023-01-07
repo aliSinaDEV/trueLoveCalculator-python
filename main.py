@@ -3,36 +3,24 @@ print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
 
-# Calculate first given name
-t_name1 = name1.lower().count("t")
-r_name1 = name1.lower().count("r")
-u_name1 = name1.lower().count("u")
-e_name1 = name1.lower().count("e")
+combined_string = name1 + name2
+lower_case_string = combined_string.lower()
 
-l_name1 = name1.lower().count("l")
-o_name1 = name1.lower().count("o")
-v_name1 = name1.lower().count("v")
+l = lower_case_string.count('l')
+o = lower_case_string.count('o')
+v = lower_case_string.count('v')
+e = lower_case_string.count('e')
 
-true_in_name1 = t_name1 + r_name1 + u_name1 + e_name1
-love_in_name1 = l_name1 + o_name1 + v_name1 + e_name1
+love_score = l + o + v + e
 
-# Calculate Second given name
-t_name2 = name2.lower().count("t")
-r_name2 = name2.lower().count("r")
-u_name2 = name2.lower().count("u")
-e_name2 = name2.lower().count("e")
+t = lower_case_string.count('t')
+r = lower_case_string.count('r')
+u = lower_case_string.count('u')
+e = lower_case_string.count('e')
 
-l_name2 = name2.lower().count("l")
-o_name2 = name2.lower().count("o")
-v_name2 = name2.lower().count("v")
+true_score = t + r + u + e
 
-true_in_name2 = t_name2 + r_name2 + u_name2 + e_name2
-love_in_name2 = l_name2 + o_name2 + v_name2 + e_name2
-
-
-total_true = true_in_name2 + true_in_name1
-total_love = love_in_name2 + love_in_name1
-final_total = str(total_true) + str(total_love)
+final_total = str(true_score) + str(love_score)
 
 
 if int(final_total) <= 10 or int(final_total) > 90:
